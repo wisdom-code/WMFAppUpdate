@@ -1,0 +1,11 @@
+framework module WMFAppUpdate {
+  umbrella header "WMFAppUpdate.h"
+
+  export *
+  module * { export * }
+}
+
+module WMFAppUpdate.Swift {
+    header "WMFAppUpdate-Swift.h"
+    requires objc
+}
