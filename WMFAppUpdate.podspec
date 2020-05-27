@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WMFAppUpdate"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "应用更新组件"
 
   # This description is used to generate tags and improve search results.
@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT"
+  spec.license      = "Apache License, Version 2.0"
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
