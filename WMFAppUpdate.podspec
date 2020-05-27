@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "WMFAppUpdate"
-  spec.version      = "0.0.2"
+  spec.version      = "0.0.3"
   spec.summary      = "应用更新组件"
 
   # This description is used to generate tags and improve search results.
@@ -68,6 +68,7 @@ Pod::Spec.new do |spec|
   # spec.platform     = :ios, "5.0"
 
   #  When using multiple platforms
+  spec.ios.deployment_target = "8.0"
   # spec.ios.deployment_target = "5.0"
   # spec.osx.deployment_target = "10.7"
   # spec.watchos.deployment_target = "2.0"
@@ -91,7 +92,6 @@ Pod::Spec.new do |spec|
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "WMFAppUpdate.framework", "WMFAppUpdate.framework/**/*.{h,m}"
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
 
@@ -118,8 +118,9 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
+  spec.vendored_frameworks  = "WMFAppUpdate.framework"
   # spec.framework  = "SomeFramework"
-  # spec.frameworks = "SomeFramework", "AnotherFramework"
+  spec.frameworks = "CoreGraphics", "Darwin", "UIKit", "ObjectiveC", "CoreFoundation", "Compatibility.50", "Dispatch", "Foundation", "Metal", "CompatibilityDynamicReplacements", "CoreImage", "QuartzCore", "Core"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
@@ -131,7 +132,7 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
