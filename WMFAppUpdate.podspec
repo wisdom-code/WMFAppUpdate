@@ -38,7 +38,7 @@ Pod::Spec.new do |spec|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "Apache License, Version 2.0"
+  spec.license      = { :type => "Apache License, Version 2.0", :file => "LICENSE" }
   # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -81,7 +81,8 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/wisdom-code/WMFAppUpdate.git", :tag => "#{spec.version}" }
+  # spec.source       = { :git => "https://github.com/wisdom-code/WMFAppUpdate.git", :tag => "#{spec.version}" }
+  spec.source       = { :http => "https://github.com/wisdom-code/WMFAppUpdate/releases/download/0.0.3/WMFAppUpdate.zip" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
