@@ -81,8 +81,8 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  # spec.source       = { :git => "https://github.com/wisdom-code/WMFAppUpdate.git", :tag => "#{spec.version}" }
-  spec.source       = { :http => "https://github.com/wisdom-code/WMFAppUpdate/releases/download/0.0.3/WMFAppUpdate.zip" }
+  spec.source       = { :git => "https://github.com/wisdom-code/WMFAppUpdate.git", :tag => "#{spec.version}" }
+  # spec.source       = { :http => "https://github.com/wisdom-code/WMFAppUpdate/releases/download/0.0.3/WMFAppUpdate.zip" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -95,8 +95,10 @@ Pod::Spec.new do |spec|
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
+  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
 
   # spec.public_header_files = "Classes/**/*.h"
+  spec.public_header_files = "WMFAppUpdate.framework/Headers/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -119,7 +121,7 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  spec.vendored_frameworks  = "WMFAppUpdate.framework"
+  # spec.vendored_frameworks  = "WMFAppUpdate.framework"
   # spec.framework  = "SomeFramework"
   spec.frameworks = "CoreGraphics", "Darwin", "UIKit", "ObjectiveC", "CoreFoundation", "Compatibility.50", "Dispatch", "Foundation", "Metal", "CompatibilityDynamicReplacements", "CoreImage", "QuartzCore", "Core"
 
