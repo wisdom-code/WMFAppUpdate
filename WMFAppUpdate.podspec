@@ -95,10 +95,10 @@ Pod::Spec.new do |spec|
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.source_files  = "Classes", "Classes/**/*.{h,m}"
+  spec.source_files  = 'WMFAppUpdate.framework/Headers/*.h', 'WMFAppUpdate.framework/Swift/*.swift'
 
   # spec.public_header_files = "Classes/**/*.h"
-  spec.public_header_files = "WMFAppUpdate.framework/Headers/*.h"
+  # spec.public_header_files = "WMFAppUpdate.framework/Headers/*.h"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -120,10 +120,10 @@ Pod::Spec.new do |spec|
   #  Link your library with frameworks, or libraries. Libraries do not include
   #  the lib prefix of their name.
   #
-
-  # spec.vendored_frameworks  = "WMFAppUpdate.framework"
+  spec.swift_version = '5.0'
+  spec.vendored_frameworks  = "WMFAppUpdate.framework"
   # spec.framework  = "SomeFramework"
-  spec.frameworks = "CoreGraphics", "Darwin", "UIKit", "ObjectiveC", "CoreFoundation", "Compatibility.50", "Dispatch", "Foundation", "Metal", "CompatibilityDynamicReplacements", "CoreImage", "QuartzCore", "Core"
+  # spec.frameworks = "CoreGraphics", "Darwin", "UIKit", "ObjectiveC", "CoreFoundation", "Compatibility50", "Dispatch", "Foundation", "Metal", "CompatibilityDynamicReplacements", "CoreImage", "QuartzCore", "Core"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
