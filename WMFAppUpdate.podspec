@@ -95,7 +95,13 @@ Pod::Spec.new do |spec|
 
   # spec.source_files  = "Classes", "Classes/**/*.{h,m}"
   # spec.exclude_files = "Classes/Exclude"
-  spec.source_files  = 'WMFAppUpdate.framework/Headers/*.h', 'WMFAppUpdate.framework/Swift/*.swift'
+  spec.source_files  = 'WMFAppUpdate.framework/Swift/*.swift'
+
+  # Adding tests with a swift dependency is a workaround in order to make pod lib lint work
+  # See: https://github.com/CocoaPods/CocoaPods/issues/8649
+  # s.test_spec 'Tests' do |s|
+  #   s.dependency 'Result', '~> 5.0'
+  # end
 
   # spec.public_header_files = "Classes/**/*.h"
   # spec.public_header_files = "WMFAppUpdate.framework/Headers/*.h"
